@@ -84,7 +84,7 @@ const Home = () => {
         </div>
         {/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
 
-        <div className="section-3 flex flex-col justify-center mt-80 sm:mt-0 items-center w-screen h-screen">
+        <div className="section-3 flex flex-col justify-center mt-[30rem] sm:mt-0 items-center w-screen h-screen">
           <img data-aos="fade-down" data-aos-duration="1500" loading="lazy" src="ProjectMemoji.png" className="  img rounded-full w-auto h-[10rem]" alt="" />
 
           <h1 data-aos-offset="300" data-aos="fade-down" data-aos-duration="1300" className="text-4xl font-bold p-2 mb-8 Hey text-center mt-4 text-white">Projects</h1>
