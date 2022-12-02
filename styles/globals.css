@@ -1,0 +1,310 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+body{
+  scroll-behavior: smooth;
+  background-color: rgb(30 58 138);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+.head {
+  background-color: #336677;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width:600px) {
+  .nav {
+    justify-content: center;
+    position: relative;
+    z-index: 50;
+  }
+
+  body .nav {
+    z-index: 50;
+
+  }
+
+  .nav .ul {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    position: absolute;
+    padding-top: 3rem;
+    z-index: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    background-color: #93c5fd;
+    border-radius: 30px;
+    overflow: hidden;
+    /* display: none; */
+
+  }
+
+  .nav .btn {
+    position: absolute;
+    right: 1rem;
+    z-index: 99;
+  }
+
+  .li {
+    background-color: #68adfd;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    z-index: -99;
+  }
+
+  .myAnimate .li {
+    animation: up 2s infinite linear;
+    animation-iteration-count: initial;
+  }
+
+  .li:hover {
+    border-bottom: 3px solid rgb(3, 25, 90);
+    border-radius: 0 0 30px 30px;
+    text-shadow: 0 0 10px #fff;
+
+
+  }
+
+  .li:nth-child(2) {
+    background-color: #4d99f1;
+  }
+
+  .li:nth-child(3) {
+    background-color: #2c79d0;
+  }
+
+  .li:nth-child(4) {
+    background-color: #0b78f6;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .flex .banner {
+    flex-direction: column;
+  }
+
+}
+
+.ws:hover {
+  text-shadow: 0px 0px 10px rgb(255, 249, 249);
+}
+
+@keyframes up {
+  0% {
+    margin-top: 20rem;
+    border-radius: 0 0 30px 30px;
+  }
+
+  25% {
+    margin-top: 8rem;
+  }
+
+  100% {
+    margin-top: 0rem;
+
+  }
+}
+
+.myAnimate {
+  display: flex;
+  position: absolute;
+}
+
+.NTMY {
+  animation: go-right 6s infinite linear;
+  text-shadow:  0px 0px 10px rgb(0, 0, 0);
+  /* text-shadow: 0px 0px 10px rgba(190, 185, 185, 0.507); */
+}
+
+.Hey {
+  text-shadow: 0px 0px 15px rgb(0, 0, 0);
+}
+
+@keyframes go-right {
+  0% {
+    margin-left: -10rem;
+    opacity: 0;
+    display: none;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  15% {
+    opacity: 1;
+    margin-left: 0;
+    position: relative;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  65% {
+    display: none;
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+    position: relative;
+  }
+
+  80% {
+    opacity: 0;
+    position: absolute;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+    position: absolute;
+
+  }
+}
+
+.img {
+  filter: drop-shadow(1px 5px 15px #000);
+}
+.imgw {
+  filter: drop-shadow(0px 0px 2px #fff);
+}
+
+.flex::-webkit-scrollbar{
+  display: none;
+}
+
+/* .svg{
+  background: url("../public/graph.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+} */
+
+
+
+
+.icon-scroll,
+.icon-scroll:before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+
+.icon-scroll {
+  width: 40px;
+  height: 70px;
+  margin-left: -20px;
+  margin-top: -5px;
+  box-shadow: inset 0 0 0 3px #fff;
+  border-radius: 25px;
+  background-color: rgba(26, 6, 95, 0.733);
+
+}
+
+.icon-scroll:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(46px);
+  }
+}
+
+
+.svg{
+  animation: up-down 3s   infinite  linear;
+}
+@keyframes up-down {
+  0%{
+    transform: translateY(0%);
+  }
+  50%{
+    transform: translateY(2%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+
+
+/* Loading animation */
+.loader::before {
+  content: "";
+  /* margin: auto; */
+  border: 15px solid #EAF0F6;
+  border-radius: 50%;
+  border-top: 15px solid #04d0fe;
+  box-shadow: 0 0 10px 5px rgb(129, 129, 129);
+  width: 150px;
+  height: 150px;
+  animation: spinner 2s linear infinite;
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.bg{
+  background-color: rgba(0, 0, 0, 0.546);
+}
