@@ -12,7 +12,11 @@ const nextConfig = withPWA({
   swcMinify: true,
   images:{
     domains: ['res.cloudinary.com'],
-  }
+    loader: "akamai",
+    path: ""
+  },
+  basePath: "",
+  assetPrefix: "",
 })
 
 module.exports = nextConfig
