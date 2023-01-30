@@ -6,6 +6,7 @@
 		"dev": "next dev",
 		"export": "next build && next export",
 		"start": "next start",
+		"export": "next export",
 		"lint": "next lint",
 		"vercel-build":"npm run prepare && next build",
 		"watch": "tailwindcss build -i styles/globals.css -o styles/newstyle.css --watch"
